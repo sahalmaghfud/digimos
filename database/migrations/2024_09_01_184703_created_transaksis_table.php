@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
             $table->foreignUuid('masjid_id')->constrained('masjids')->onDelete('cascade');
-            $table->string('saldo');
+            $table->string('Saldo');
             $table->enum('jenis_transaksi', ['masuk', 'keluar']);
             $table->decimal('jumlah', 15, 2);
             $table->text('keterangan')->nullable();

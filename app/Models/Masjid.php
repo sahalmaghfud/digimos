@@ -63,9 +63,9 @@ class Masjid extends Model
         return $this->belongsTo(Province::class);
     }
 
-    public function saldo(): HasMany
+    public function Saldo(): HasMany
     {
-        return $this->hasMany(saldo::class);
+        return $this->hasMany(Saldo::class);
     }
 
     public function transaksi(): HasMany

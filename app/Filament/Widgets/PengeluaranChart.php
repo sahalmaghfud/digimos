@@ -2,7 +2,7 @@
 
 namespace App\Filament\Widgets;
 
-use App\Models\saldo;
+use App\Models\Saldo;
 use App\Models\transaksi;
 use Filament\Widgets\ChartWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
@@ -33,14 +33,14 @@ class PengeluaranChart extends ChartWidget
             '#8C33FF', // Biru Muda
         ];
 
-        $saldos = saldo::where('masjid_id', Auth::user()->masjid_id)->get();
+        $Saldos = Saldo::where('masjid_id', Auth::user()->masjid_id)->get();
 
         $pemasukan = [];
-        foreach ($saldos as $saldo) {
-            // Hitung total pemasukan kas untuk setiap saldo
-            $pemasukan[$saldo->id] = Trend::query(transaksi::where([
+        foreach ($Saldos as $Saldo) {
+            // Hitung total pemasukan kas untuk setiap Saldo
+            $pemasukan[$Saldo->id] = Trend::query(transaksi::where([
                 ['jenis_transaksi', '=', 'keluar'],
-                ['saldo_id', '=', $saldo->id],
+                ['Saldo_id', '=', $Saldo->id],
                 ['masjid_id', '=', Auth::user()->masjid_id]
             ]))
                 ->between(
@@ -57,7 +57,7 @@ class PengeluaranChart extends ChartWidget
         // Loop untuk membangun dataset dan label
         foreach ($pemasukan as $id => $data) {
             $datasets[] = [
-                'label' => 'Pengeluaran ' . $saldos->firstWhere('id', $id)->nama,
+                'label' => 'Pengeluaran ' . $Saldos->firstWhere('id', $id)->nama,
                 'data' => $data->map->aggregate->toArray(),
                 'borderColor' => $colors[($id + 3) % 3],
             ];

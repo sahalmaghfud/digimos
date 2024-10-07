@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\TransaksiResource\Pages;
 use App\Filament\Resources\TransaksiResource\RelationManagers;
-use App\Models\saldo;
+use App\Models\Saldo;
 use App\Models\Transaksi;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
@@ -33,7 +33,7 @@ class TransaksiResource extends Resource
         return $form
             ->schema([
                 Section::make(" ")->schema([
-                    Select::make('saldo_id')
+                    Select::make('Saldo_id')
                         ->label('Jenis Saldo')
                         ->options(Saldo::where('masjid_id', Auth::user()->masjid_id)->pluck('nama', 'id'))
                         ->live()
@@ -66,7 +66,7 @@ class TransaksiResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('saldo.nama')
+                TextColumn::make('Saldo.nama')
                     ->label('Jenis Saldo')
                     ->sortable()
                     ->searchable(),

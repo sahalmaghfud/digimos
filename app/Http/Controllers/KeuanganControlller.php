@@ -12,22 +12,22 @@ class KeuanganControlller extends Controller
     {
         $masjid = Masjid::where('id', $id)->first();
         $year = now()->year;
-        $saldo = $masjid->saldo;
+        $Saldo = $masjid->Saldo;
         $zberas = $masjid->zakat()->where('jenis_zakat', 'beras')->whereYear('created_at', $year)->sum('jumlah');
         $zuang = $masjid->zakat()->where('jenis_zakat', 'uang')->whereYear('created_at', $year)->sum('jumlah');
         $zorang = $masjid->zakat()->whereYear('created_at', $year)->sum('jumlah_jiwa');
 
-        $transaksi = $masjid->transaksi()->orderBy('created_at', 'desc')->with('saldo')->get();
+        $transaksi = $masjid->transaksi()->orderBy('created_at', 'desc')->with('Saldo')->get();
 
 
-        if (!$saldo) {
+        if (!$Saldo) {
             return response()->view('errors.404', [], 404);
         }
 
         // Return a view with the berita data
         return view('keuangan', [
             'masjid' => $masjid,
-            'saldo' => $saldo,
+            'Saldo' => $Saldo,
             'transaksi' => $transaksi,
             'beras' => $zberas,
             'uang' => $zuang,

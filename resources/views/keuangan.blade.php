@@ -2,7 +2,7 @@
     $nama = [];
     $jumlah = [];
 
-    foreach ($saldo as $val) {
+    foreach ($Saldo as $val) {
         $nama[] = $val->nama;
         $jumlah[] = $val->jumlah;
     }
@@ -67,7 +67,7 @@
                 {{ $masjid->nama_masjid }}</h2>
             <h3 class="text-xl sm:text-2 xl font-bold text-slate-800 mb-4">Saldo</h3>
             <div class="flex items-start gap-2  flex-wrap">
-                @foreach ($saldo as $sal)
+                @foreach ($Saldo as $sal)
                     <div class="max-w-sm ">
                         <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                             <div class="px-6 py-4">
@@ -270,7 +270,7 @@
                     const tr = document.createElement('tr');
                     let createdAt = new Date(row.created_at).toLocaleDateString('en-CA');
                     tr.innerHTML =
-                        `<td>${createdAt}</td><td>${row['saldo']['nama']}</td><td>${row.jenis_transaksi}</td><td>Rp.${row.jumlah}</td><td>${row.keterangan}</td>`;
+                        `<td>${createdAt}</td><td>${row['Saldo']['nama']}</td><td>${row.jenis_transaksi}</td><td>Rp.${row.jumlah}</td><td>${row.keterangan}</td>`;
                     tbody.appendChild(tr);
                 });
 

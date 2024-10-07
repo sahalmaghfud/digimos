@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('saldos', function (Blueprint $table) {
+        Schema::create('Saldos', function (Blueprint $table) {
             $table->id();
             $table->foreignUuid('masjid_id')->constrained('masjids')->onDelete('cascade');
             $table->decimal('kas_masjid', 15, 2)->default(0);

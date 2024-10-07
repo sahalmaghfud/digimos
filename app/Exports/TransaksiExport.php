@@ -34,7 +34,7 @@ class transaksiExport implements FromQuery, WithMapping, WithColumnFormatting, W
     {
         return [
             Date::dateTimeToExcel($transaksi->created_at),
-            $transaksi->saldo->nama,
+            $transaksi->Saldo->nama,
             $transaksi->jenis_transaksi,
             "Rp. " .  $transaksi->jumlah,
             $transaksi->keterangan,

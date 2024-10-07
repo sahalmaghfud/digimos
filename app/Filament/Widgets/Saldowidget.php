@@ -14,16 +14,16 @@ class Saldowidget extends ChartWidget
 
     protected function getData(): array
     {
-        // Mengambil data saldo berdasarkan masjid_id pengguna yang sedang login
-        $saldos = Saldo::where('masjid_id', Auth::user()->masjid_id)->get();
+        // Mengambil data Saldo berdasarkan masjid_id pengguna yang sedang login
+        $Saldos = Saldo::where('masjid_id', Auth::user()->masjid_id)->get();
 
         // Membuat array untuk data dan label
         $dataValues = [];
         $labels = [];
 
-        foreach ($saldos as $saldo) {
-            $dataValues[] = $saldo->jumlah; // Ambil nilai jumlah
-            $labels[] = $saldo->nama; // Ambil nama sebagai label
+        foreach ($Saldos as $Saldo) {
+            $dataValues[] = $Saldo->jumlah; // Ambil nilai jumlah
+            $labels[] = $Saldo->nama; // Ambil nama sebagai label
         }
 
         return [
