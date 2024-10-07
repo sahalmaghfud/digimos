@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Masjid Inventaris</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    @livewireStyles
+</head>
+
+<body>
+
+    {{-- hamburger button --}}
+    <div class="sticky top-0 left-0 w-full bg-green-600 bg-opacity-70 py-3 rounded-lg z-10   md:hidden">
+        <div class="container mx-auto px-4">
+            <div class="block">
+                <button id="menu-btn" class="focus:outline-none text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <x-header></x-header>
+    <div class=" container mx-auto px-4 bg-white">
+        <!-- Slide Menu for Mobile -->
+        <x-mobile-menu :masjid="$masjid"></x-mobile-menu>
+        <x-sampul :masjid="$masjid"></x-sampul>
+        <x-navigation-tabs :currentRoute="'Inventaris'" :masjid="$masjid"></x-navigation-tabs>
+
+
+        <div class="container mx-auto mt-10 my-8 p-4    bg-white shadow-md rounded-lg">
+            @livewire('prayer-times', ['id' => $masjid->district_id])
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    @livewireScripts
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('menu-overlay');
+
+
+            // Open menu
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.remove('-translate-x-full');
+                menuOverlay.classList.remove('hidden');
+            });
+
+            // Close menu
+            closeMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('-translate-x-full');
+                menuOverlay.classList.add('hidden');
+            });
+
+            menuOverlay.addEventListener('click', function() {
+                mobileMenu.classList.add('-translate-x-full');
+                menuOverlay.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
