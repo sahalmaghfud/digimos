@@ -8,19 +8,19 @@
     <style>
         @keyframes slideBackground {
             0% {
-                background-image: url('https://images.unsplash.com/photo-1699302150582-bffc5309a8c8?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                background-image: url({{ asset('images/masjid1.jpg') }});
             }
 
             33% {
-                background-image: url('https://images.unsplash.com/photo-1696220928857-ef970a6a60c9?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                background-image: url({{ asset('images/masjid2.jpg') }});
             }
 
             67% {
-                background-image: url('https://plus.unsplash.com/premium_photo-1669317566483-d3327adeda10?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                background-image: url({{ asset('images/masjid3.jpg') }});
             }
 
             100% {
-                background-image: url('https://plus.unsplash.com/premium_photo-1721311166723-5c408da54364?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                background-image: url({{ asset('images/masjid4.jpg') }});
             }
         }
 
