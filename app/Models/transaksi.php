@@ -13,19 +13,19 @@ class Transaksi extends Model
     protected static function booted()
     {
         static::created(function ($transaksi) {
-            // Cari saldo berdasarkan saldo_id yang dikirimkan
-            $saldo = Saldo::find($transaksi->saldo_id);
+            // Cari Saldo berdasarkan Saldo_id yang dikirimkan
+            $Saldo = Saldo::find($transaksi->Saldo_id);
 
-            if ($saldo) {
-                // Update saldo berdasarkan jenis transaksi
+            if ($Saldo) {
+                // Update Saldo berdasarkan jenis transaksi
                 if ($transaksi->jenis_transaksi == 'masuk') {
-                    $saldo->jumlah += $transaksi->jumlah;
+                    $Saldo->jumlah += $transaksi->jumlah;
                 } elseif ($transaksi->jenis_transaksi == 'keluar') {
-                    $saldo->jumlah -= $transaksi->jumlah;
+                    $Saldo->jumlah -= $transaksi->jumlah;
                 }
 
-                // Simpan perubahan saldo
-                $saldo->save();
+                // Simpan perubahan Saldo
+                $Saldo->save();
             }
         });
     }
@@ -35,16 +35,16 @@ class Transaksi extends Model
         return $this->belongsTo(Masjid::class);
     }
 
-    public function saldo(): BelongsTo
+    public function Saldo(): BelongsTo
     {
-        return $this->belongsTo(Saldo::class, 'saldo_id');
+        return $this->belongsTo(Saldo::class, 'Saldo_id');
     }
 
 
 
     protected $fillable = [
         'masjid_id',
-        'saldo_id',
+        'Saldo_id',
         'jenis_transaksi',
         'jumlah',
         'keterangan'

@@ -108,7 +108,8 @@
                 class=" font-extrabold text-white leading-tight  text-4xl md:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                 Digital Mosque
             </h1>
-            <p class="text-lg text-white">Innovative solutions for a modern world</p>
+            <p class="text-lg font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white">#NgurusMasjidJadiMudah
+            </p>
             <form action="{{ route('search') }}" method="GET">
                 <div class=" mx-auto relative">
                     <input type="text" placeholder="Cari Masjid" name="query"
@@ -135,16 +136,21 @@
             <!-- Deskripsi -->
             <div class="flex flex-col md:flex-row items-center mb-6 md:mb-12">
                 <div class="md:w-1/2 pr-0 md:pr-8 mb-6 md:mb-0">
-                    <h3 class="text-xl md:text-2xl font-semibold text-green-500 mb-3 md:mb-5">Deskripsi Perusahaan</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold text-green-500 mb-3 md:mb-5">Deskripsi</h3>
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Perusahaan kami adalah pemimpin inovatif dalam industri teknologi hijau. Kami berdedikasi untuk
-                        menciptakan solusi berkelanjutan yang memadukan teknologi canggih dengan kepedulian terhadap
-                        lingkungan.
+                        Digimos (Digital Mosque) adalah sebuah platform digital yang dirancang khusus untuk
+                        mempermudah manajemen masjid secara modern dan terintegrasi. Digimos membantu pengurus masjid
+                        mengelola data jamaah, keuangan, donasi, zakat, jadwal kegiatan, serta memberikan akses mudah
+                        kepada jamaah untuk terlibat aktif dalam kegiatan masjid. Sistem ini juga mendukung
+                        transparansi, keamanan, dan kenyamanan dalam pengelolaan masjid dengan fitur yang dapat diakses
+                        kapan saja melalui perangkat mobile. Dengan teknologi inovatif, Digimos memperkuat interaksi
+                        antara masjid dan jamaah serta mempercepat pengambilan keputusan strategis melalui data yang
+                        terstruktur.
                     </p>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <img src="/api/placeholder/500/375" alt="Deskripsi Perusahaan"
-                        class="rounded-lg shadow-lg w-full max-w-md" />
+                    <img src={{ asset('images/deskripsi.png') }} alt="Deskripsi Perusahaan"
+                        class="rounded-lg shadow-lg w-full max-w-lg" />
                 </div>
             </div>
             <!-- Keunggulan -->
@@ -152,45 +158,56 @@
                 <div class="md:w-1/2 pl-0 md:pl-8 mb-6 md:mb-0">
                     <h3 class="text-xl md:text-2xl font-semibold text-green-500 mb-3 md:mb-5">Keunggulan Kami</h3>
                     <ul class="list-disc list-inside text-slate-700 text-sm md:text-base space-y-2 md:space-y-3">
-                        <li>Teknologi ramah lingkungan terdepan</li>
-                        <li>Tim ahli dengan pengalaman lebih dari 20 tahun</li>
-                        <li>Komitmen terhadap keberlanjutan dan tanggung jawab sosial</li>
-                        <li>Layanan pelanggan 24/7 yang unggul</li>
-                        <li>Inovasi berkelanjutan dalam produk dan layanan</li>
+                        <li>Pengelolaan data masjid terpusat dan terstruktur</li>
+                        <li>Transparansi keuangan dengan pencatatan transaksi digital</li>
+                        <li>Kemudahan pengelolaan jadwal kegiatan masjid</li>
+                        <li>Akses informasi waktu sholat akurat berdasarkan lokasi</li>
+                        <li>Pengelolaan donasi dan zakat</li>
+                        <li>Integrasi dengan media sosial untuk komunikasi lebih luas</li>
+                        <li>Bisa diakses dari berbagai perangkat</li>
+                        <li>Dashboard analisis data yang membantu pengambilan keputusan</li>
+                        <li>Keamanan data jamaah dan masjid yang terjamin</li>
+
                     </ul>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <img src="/api/placeholder/500/375" alt="Keunggulan Kami"
-                        class="rounded-lg shadow-lg w-full max-w-md" />
+                    <img src={{ asset('images/keunggulan.png') }} alt="Keunggulan Kami"
+                        class="rounded-lg shadow-lg w-full max-w-lg" />
                 </div>
             </div>
             <!-- Visi -->
-            <div class="flex flex-col md:flex-row items-center">
+            <div class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 pr-0 md:pr-8 mb-6 md:mb-0">
                     <h3 class="text-xl md:text-2xl font-semibold text-green-500 mb-3 md:mb-5">Visi Kami</h3>
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Visi kami adalah menjadi pelopor dalam transformasi menuju dunia yang lebih hijau dan
-                        berkelanjutan. Kami berkomitmen untuk terus berinovasi, menginspirasi perubahan positif.
+                        Menjadi solusi digital terdepan dalam memfasilitasi manajemen masjid yang efisien, transparan,
+                        dan berbasis teknologi, serta memperkuat hubungan antara masjid dan jamaah melalui inovasi yang
+                        berkelanjutan, demi kemajuan dan kesejahteraan umat Islam di seluruh dunia.
                     </p>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <img src="/api/placeholder/500/375" alt="Visi Kami" class="rounded-lg shadow-lg w-full max-w-md" />
+                    <img src={{ asset('images/visi.png') }} alt="Visi Kami"
+                        class="rounded-lg shadow-lg w-full max-w-lg " />
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
 
     <div class="min-h-screen flex flex-col" id="contact-us">
         <div
             class="flex-grow container mx-auto px-4 py-8 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
             <div class="w-full md:w-1/2 space-y-6">
                 <section>
-                    <h2 class="text-2xl font-semibold text-green-600 mb-3">Ingin Bergabung dengan Perusahaan Kami?</h2>
+                    <h2 class="text-2xl font-semibold text-green-600 mb-3">Ingin Bergabung dengan Digimos?</h2>
                     <p class="text-base text-slate-700 mb-4">
-                        Kami selalu mencari talenta baru untuk bergabung dengan tim kami yang berdedikasi. Jadilah
-                        bagian dari revolusi teknologi hijau.
+                        Kami selalu mencari mitra dan komunitas untuk bergabung dalam pengembangan sistem manajemen
+                        masjid yang lebih baik. Jadilah bagian dari revolusi digital masjid dengan Digimos.
                     </p>
-                    <img src="/api/placeholder/600/400" alt="Tim Kami" class="rounded-lg shadow-lg w-full" />
+                    <img src={{ asset('images/tim.jpg') }} alt="Tim Kami" class="rounded-lg shadow-lg w-auto" />
                 </section>
                 <section>
                     <h2 class="text-xl font-semibold text-green-600 mb-3">Informasi Kontak</h2>
@@ -204,7 +221,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
-                            Jl. Teknologi Hijau No. 123, Jakarta
+                            Jl. Jambi Muara Bulian No.KM. 15, Mendalo Darat, Kec. Jambi Luar Kota, Kabupaten Muaro
+                            Jambi, Jambi
                         </li>
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
@@ -213,7 +231,7 @@
                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
                                 </path>
                             </svg>
-                            +62 21 1234 5678
+                            +628 3171 7789 87
                         </li>
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
@@ -222,7 +240,7 @@
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                                 </path>
                             </svg>
-                            info@perusahaanteknologihijau.com
+                            join@digimos.com
                         </li>
                     </ul>
                 </section>
@@ -230,7 +248,7 @@
             <div
                 class="w-full md:w-1/2 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h2 class="text-xl font-semibold text-green-600 mb-4 text-center">Kirim Pesan Kepada Kami</h2>
-                <form action="mailto:info@perusahaanteknologihijau.com" method="post" enctype="text/plain">
+                <form action="mailto:join@digimos.com" method="post" enctype="text/plain">
                     <div class="mb-4">
                         <label for="name" class="block text-slate-700 font-semibold mb-1">Nama Lengkap</label>
                         <input type="text" id="name" name="name" required
@@ -269,14 +287,13 @@
 
 
 
-
     <!-- Footer -->
     <footer class="bg-green-950 text-white py-2">
         <div class="container mx-auto flex flex-col items-center">
             <p class="mb-2">&copy; 2024 Digimos</p>
             <div class="flex space-x-4">
 
-                <a href="https://instagram.com" target="_blank" class="hover:opacity-75">
+                <a href="https://www.instagram.com/pmw_digimos" target="_blank" class="hover:opacity-75">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path
                             d="M8 2C4.68629 2 2 4.68629 2 8V16C2 19.3137 4.68629 22 8 22H16C19.3137 22 22 19.3137 22 16V8C22 4.68629 19.3137 2 16 2H8ZM8 4H16C18.2091 4 20 5.79086 20 8V16C20 18.2091 18.2091 20 16 20H8C5.79086 20 4 18.2091 4 16V8C4 5.79086 5.79086 4 8 4ZM17 6C16.4477 6 16 6.44772 16 7C16 7.55228 16.4477 8 17 8C17.5523 8 18 7.55228 18 7C18 6.44772 17.5523 6 17 6ZM12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM12 9C13.6569 9 15 10.3431 15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9Z"

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Saldo extends Model
 {
-    protected $table = 'saldos';
+    protected $table = 'Saldos';
     function Masjid(): BelongsTo
     {
         return $this->BelongsTo(Masjid::class);

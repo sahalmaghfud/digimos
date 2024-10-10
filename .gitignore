@@ -9,7 +9,6 @@
 .env.production
 .phpactor.json
 .phpunit.result.cache
-.htaccess
 Homestead.json
 Homestead.yaml
 auth.json
@@ -18,3 +17,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+.htaccess

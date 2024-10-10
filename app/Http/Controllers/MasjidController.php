@@ -18,7 +18,7 @@ class MasjidController extends Controller
     public function inventaris($id)
     {
         $masjid = Masjid::where('id', $id)->firstOrFail();
-        $inventaris = $masjid->Inventaris()->paginate(1);
+        $inventaris = $masjid->Inventaris()->paginate(10);
 
         // Kirim data inventaris ke view
         return view('inventaris', ['masjid' => $masjid, 'inventaris' => $inventaris]);
@@ -35,7 +35,7 @@ class MasjidController extends Controller
     public function berita($id)
     {
         $masjid = Masjid::where('id', $id)->firstOrFail();
-        $berita = $masjid->berita()->orderBy('created_at', 'desc')->paginate(2);
+        $berita = $masjid->berita()->orderBy('created_at', 'desc')->paginate(10);
 
 
         // Kirim data berita ke view
