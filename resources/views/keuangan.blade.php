@@ -253,7 +253,7 @@
             });
 
             const data = @json($transaksi);
-            console.log(data);
+            console.log(data)
 
             let currentPage = 0;
             const rowsPerPage = 10;
@@ -270,7 +270,7 @@
                     const tr = document.createElement('tr');
                     let createdAt = new Date(row.created_at).toLocaleDateString('en-CA');
                     tr.innerHTML =
-                        `<td>${createdAt}</td><td>${row['Saldo']['nama']}</td><td>${row.jenis_transaksi}</td><td>Rp.${row.jumlah}</td><td>${row.keterangan}</td>`;
+                        `<td>${createdAt}</td><td>${row['saldo']['nama']}</td><td>${row.jenis_transaksi}</td><td>Rp.${row.jumlah}</td><td>${row.keterangan}</td>`;
                     tbody.appendChild(tr);
                 });
 
