@@ -1,6 +1,7 @@
 ![Logo Digimos](./public/images/logoDigimos.png)
 
-### Digimos (Digital Mosque) 
+
+## [Digimos](https://digimos.org) (Digital Mosque)
 sebuah platform digital yang dirancang khusus untuk mempermudah manajemen masjid secara modern dan terintegrasi. Digimos membantu pengurus masjid mengelola data jamaah, keuangan, donasi, zakat, jadwal kegiatan, serta memberikan akses mudah kepada jamaah untuk terlibat aktif dalam kegiatan masjid. Sistem ini juga mendukung transparansi, keamanan, dan kenyamanan dalam pengelolaan masjid dengan fitur yang dapat diakses kapan saja melalui perangkat mobile. Dengan teknologi inovatif, Digimos memperkuat interaksi antara masjid dan jamaah serta mempercepat pengambilan keputusan strategis melalui data yang terstruktur.
 
 
