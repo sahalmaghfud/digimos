@@ -29,7 +29,9 @@ class InventarisResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-m-archive-box';
 
-    protected static ?string $title = 'Inentaris';
+    protected static ?string $title = 'Inventaris';
+    protected ?string $heading = 'Inventaris';
+    protected static ?string $slug = 'Inventaris';
     protected static ?string $navigationLabel = 'Inventaris';
 
 

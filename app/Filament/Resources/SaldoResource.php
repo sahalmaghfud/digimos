@@ -20,8 +20,10 @@ class SaldoResource extends Resource
 {
     protected static ?string $model = Saldo::class;
     protected static ?string $navigationLabel = 'Edit Saldo';
-
     protected static ?string $navigationIcon = 'heroicon-o-tag';
+    protected static ?string $title = 'Saldo';
+    protected ?string $heading = 'Saldo';
+    protected static ?string $slug = 'Saldo';
 
     public static function form(Form $form): Form
     {

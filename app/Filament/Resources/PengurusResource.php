@@ -23,6 +23,9 @@ class PengurusResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-m-user-group';
     protected static ?string $title = 'Pengurus';
+    protected ?string $heading = 'Pengurus';
+    protected static ?string $slug = 'Pengurus';
+    protected static ?string $navigationLabel = 'Pengurus';
 
 
     public static function form(Form $form): Form

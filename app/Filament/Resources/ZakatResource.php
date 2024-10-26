@@ -27,6 +27,9 @@ class ZakatResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-banknotes';
 
     protected static ?string $title = 'Zakat';
+    protected ?string $heading = 'Zakat';
+    protected static ?string $slug = 'Zakat';
+    protected static ?string $navigationLabel = 'Zakat';
 
 
     public static function form(Form $form): Form

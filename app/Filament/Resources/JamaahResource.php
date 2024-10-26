@@ -25,6 +25,8 @@ class JamaahResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     protected static ?string $title = 'Jamaah';
+    protected ?string $heading = 'Jamaah';
+    protected static ?string $slug = 'Jamaah';
     protected static ?string $navigationLabel = 'Jamaah';
 
 

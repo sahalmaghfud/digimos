@@ -28,6 +28,11 @@ class TransaksiResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
 
+    protected static ?string $title = 'Transaksi';
+    protected ?string $heading = 'Transaksi';
+    protected static ?string $slug = 'Transaksi';
+    protected static ?string $navigationLabel = 'Transaksi';
+
     public static function form(Form $form): Form
     {
         return $form

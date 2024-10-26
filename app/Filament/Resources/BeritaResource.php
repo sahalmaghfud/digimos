@@ -34,6 +34,8 @@ class BeritaResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
     protected static ?string $title = 'Berita';
+    protected ?string $heading = 'Berita';
+    protected static ?string $slug = 'Berita';
     protected static ?string $navigationLabel = 'Berita';
 
 

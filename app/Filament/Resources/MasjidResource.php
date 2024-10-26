@@ -36,7 +36,9 @@ class MasjidResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-m-moon';
 
     protected static ?string $title = 'Masjid';
-
+    protected ?string $heading = 'Masjid';
+    protected static ?string $slug = 'Masjid';
+    protected static ?string $navigationLabel = 'Masjid';
 
     public static function form(Form $form): Form
     {
