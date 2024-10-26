@@ -22,6 +22,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
@@ -33,11 +34,14 @@ class BeritaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
-    protected static ?string $title = 'Berita';
     protected ?string $heading = 'Berita';
     protected static ?string $slug = 'Berita';
     protected static ?string $navigationLabel = 'Berita';
 
+    public function getTitle(): string | Htmlable
+    {
+        return __('Berita');
+    }
 
     public static function form(Form $form): Form
     {

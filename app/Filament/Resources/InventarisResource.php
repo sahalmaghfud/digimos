@@ -19,6 +19,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +34,10 @@ class InventarisResource extends Resource
     protected ?string $heading = 'Inventaris';
     protected static ?string $slug = 'Inventaris';
     protected static ?string $navigationLabel = 'Inventaris';
-
+    public function getTitle(): string | Htmlable
+    {
+        return __('Inventaris');
+    }
 
     public static function form(Form $form): Form
     {

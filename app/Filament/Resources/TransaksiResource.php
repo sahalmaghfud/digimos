@@ -33,6 +33,11 @@ class TransaksiResource extends Resource
     protected static ?string $slug = 'Transaksi';
     protected static ?string $navigationLabel = 'Transaksi';
 
+    public function getTitle(): string | Htmlable
+    {
+        return __('Transaksi');
+    }
+
     public static function form(Form $form): Form
     {
         return $form

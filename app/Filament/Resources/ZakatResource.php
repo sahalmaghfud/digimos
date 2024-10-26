@@ -16,6 +16,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
@@ -30,6 +31,11 @@ class ZakatResource extends Resource
     protected ?string $heading = 'Zakat';
     protected static ?string $slug = 'Zakat';
     protected static ?string $navigationLabel = 'Zakat';
+
+    public function getTitle(): string | Htmlable
+    {
+        return __('Zakat');
+    }
 
 
     public static function form(Form $form): Form

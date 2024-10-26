@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
@@ -24,6 +25,11 @@ class SaldoResource extends Resource
     protected static ?string $title = 'Saldo';
     protected ?string $heading = 'Saldo';
     protected static ?string $slug = 'Saldo';
+
+    public function getTitle(): string | Htmlable
+    {
+        return __('Saldo');
+    }
 
     public static function form(Form $form): Form
     {

@@ -14,6 +14,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
@@ -28,7 +29,10 @@ class JamaahResource extends Resource
     protected ?string $heading = 'Jamaah';
     protected static ?string $slug = 'Jamaah';
     protected static ?string $navigationLabel = 'Jamaah';
-
+    public function getTitle(): string | Htmlable
+    {
+        return __('Jamaah');
+    }
 
     public static function form(Form $form): Form
     {
