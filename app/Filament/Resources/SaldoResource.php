@@ -42,12 +42,7 @@ class SaldoResource extends Resource
             ->filters([
                 //
             ])
-            ->actions([])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
+            ->actions([]);
     }
 
     public static function getRelations(): array

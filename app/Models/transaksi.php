@@ -37,7 +37,7 @@ class Transaksi extends Model
 
     public function Saldo(): BelongsTo
     {
-        return $this->belongsTo(Saldo::class, 'Saldo_id');
+        return $this->belongsTo(Saldo::class);
     }
 
 

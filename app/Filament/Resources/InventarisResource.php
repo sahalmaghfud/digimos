@@ -29,6 +29,9 @@ class InventarisResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-m-archive-box';
 
+    protected static ?string $title = 'Inentaris';
+
+
     public static function form(Form $form): Form
     {
         return $form

@@ -22,6 +22,8 @@ class PengurusResource extends Resource
     protected static ?string $model = Pengurus::class;
 
     protected static ?string $navigationIcon = 'heroicon-m-user-group';
+    protected static ?string $title = 'Pengurus';
+
 
     public static function form(Form $form): Form
     {

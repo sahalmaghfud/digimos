@@ -21,7 +21,11 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
+    protected static ?string $navigationLabel = User::class;
+
     protected static ?string $navigationIcon = 'heroicon-m-users';
+
+    protected static ?string $title = 'User';
 
     public static function form(Form $form): Form
     {
@@ -49,11 +53,6 @@ class UserResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
             ]);
     }
 

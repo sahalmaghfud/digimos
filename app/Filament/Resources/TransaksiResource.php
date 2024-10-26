@@ -94,11 +94,7 @@ class TransaksiResource extends Resource
                 //
             ])
             ->actions([])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ])->defaultSort("created_at", "desc");
+            ->defaultSort("created_at", "desc");
     }
 
     public static function getRelations(): array

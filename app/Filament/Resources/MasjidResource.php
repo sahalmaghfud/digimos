@@ -35,6 +35,8 @@ class MasjidResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-m-moon';
 
+    protected static ?string $title = 'Masjid';
+
 
     public static function form(Form $form): Form
     {
@@ -173,11 +175,6 @@ class MasjidResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
             ]);
     }
 
