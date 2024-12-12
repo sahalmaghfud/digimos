@@ -248,36 +248,12 @@
             </div>
             <div
                 class="w-full md:w-1/2 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h2 class="text-xl font-semibold text-green-600 mb-4 text-center">Kirim Pesan Kepada Kami</h2>
-                <form action="mailto:join@digimos.com" method="post" enctype="text/plain">
-                    <div class="mb-4">
-                        <label for="name" class="block text-slate-700 font-semibold mb-1">Nama Lengkap</label>
-                        <input type="text" id="name" name="name" required
-                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 placeholder-slate-400"
-                            placeholder="Masukkan nama lengkap Anda">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-slate-700 font-semibold mb-1">Alamat Email</label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 placeholder-slate-400"
-                            placeholder="Masukkan alamat email Anda">
-                    </div>
-                    <div class="mb-4">
-                        <label for="phone" class="block text-slate-700 font-semibold mb-1">Nomor Telepon</label>
-                        <input type="tel" id="phone" name="phone"
-                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 placeholder-slate-400"
-                            placeholder="Masukkan nomor telepon Anda (opsional)">
-                    </div>
-                    <div class="mb-4">
-                        <label for="message" class="block text-slate-700 font-semibold mb-1">Pesan</label>
-                        <textarea id="message" name="message" rows="4" required
-                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 placeholder-slate-400"
-                            placeholder="Tuliskan pesan Anda"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="w-full py-2 px-4 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition-colors duration-300">Kirim
-                        Pesan</button>
-                </form>
+                <h2 class="text-xl font-semibold text-green-600 mb-4 text-center"></h2>
+                <a href="https://forms.gle/eew2iFbcq6QWUYgp8">
+                    <button
+                        class="w-full py-2 px-4 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition-colors duration-300">
+                        Daftar
+                        Sekarang!</button></a>
             </div>
         </div>
     </div>
